@@ -1,13 +1,176 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  color: #333;
+  background-color: #fff;
+  min-height: 100%;
+  margin: 0;
+  font-family: Funnel Display, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.container_content {
+  width: calc(100% - 60px);
+  margin: 0 auto;
+}
+.section {
+  margin-top: 120px;
+}
+
+@media (max-width: 1399px) {
+  .section {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container_content {
+    width: 100%;
+  }
+  body {
+    font-size: 15px;
+  }
+}
+
+.scroll-column {
+  overflow: hidden;
+}
+
+.scroll-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: scrollUpLinear 20s linear infinite;
+}
+
+.scroll-inner-delay {
+  animation-delay: -10s;
+}
+
+@keyframes scrollUpLinear {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.button-border {
+  border: 1px solid;
+}
+button {
+  cursor: pointer;
+}
+
+.right-aero {
+  top: 280px;
+  left: -30px;
+}
+
+.left-aero {
+  top: 280px;
+  right: -30px;
+}
+
+@media (max-width: 1024px) {
+  .right-aero {
+    top: -30px;
+    left: 50px;
+  }
+
+  .left-aero {
+    top: -30px;
+    right: 50px;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ---------- marquee globals ---------- */
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* iOS scroll jump fixes */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  /* FIX: disable bouncy scrolling */
+  -webkit-overflow-scrolling: auto !important;
+}
+
+/* track holds two copies side-by-side */
+.marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: max-content;
+
+  /* iOS stability */
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  /* animation */
+  animation-name: marquee-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: var(--duration, 12s);
+}
+
+/* No shrinking inside the row */
+.marquee-track > * {
+  flex: 0 0 auto;
+}
+
+/* iOS-safe keyframes */
+@keyframes marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(-1 * var(--shift, 0px)), 0, 0);
+    -webkit-transform: translate3d(calc(-1 * var(--shift, 0px)), 0, 0);
+  }
+}
+
+/* Pause on hover class */
+.marquee--paused .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Gap */
+.marquee-item-gap {
+  margin-right: 24px;
+}
+
+/* GLOBAL iOS scroll-anchor fix */
+html,
+body {
+  overflow-anchor: none;
 }
