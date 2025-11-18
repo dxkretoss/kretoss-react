@@ -60,7 +60,7 @@ export default function Contact() {
             if (fillForm?.data?.success) {
                 toast.success('Form submitted successfully.');
                 setTimeout(() => {
-                    router("/thankyou");
+                    router("/hire-mobile-app-developers/thankyou");
                 }, 2000);
             }
         } catch (error) {

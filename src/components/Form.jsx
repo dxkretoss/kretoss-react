@@ -167,7 +167,7 @@ export default function Form({ title, buttontext, onClose, plan }) {
                 toast.success('Form submitted successfully.');
                 onClose();
                 setTimeout(() => {
-                    router("/thankyou");
+                    router("/hire-mobile-app-developers/thankyou");
                 }, 2000);
             }
         } catch (error) {

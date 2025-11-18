@@ -9,8 +9,11 @@ function App() {
     <BrowserRouter>
       <Toaster />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/thankyou" element={<ThanksPage />} />
+        <Route path="/hire-mobile-app-developers" element={<Home />} />
+        <Route
+          path="/hire-mobile-app-developers/thankyou"
+          element={<ThanksPage />}
+        />
       </Routes>
       <BackToTop />
     </BrowserRouter>
