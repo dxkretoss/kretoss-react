@@ -81,7 +81,7 @@ export default function Hero() {
                 <div className="w-full lg:w-[55%] flex flex-col items-center text-center lg:items-start lg:text-left">
                     <h1 className="text-[40px] lg:text-[44px] 2xl:text-[56px] leading-tight mb-6 font-semibold text-white">
                         Hire{" "}
-                        <span className="bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] font-bold text-white rounded-md px-3 sm:px-4 md:px-5 py-2 sm:py-3">
+                        <span className="bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] font-bold text-white rounded-md px-3 sm:px-4 md:px-5 py-2 sm:py-3 whitespace-nowrap">
                             Mobile App
                         </span>{" "}
                         Developers
@@ -134,7 +134,7 @@ export default function Hero() {
                         {stats.map((item, index) => (
                             <div
                                 key={index}
-                                className="flex items-center justify-center sm:gap-4 flex-col sm:flex-row w-[90px] h-auto p-[10px] gap-2 sm:w-[160px] 2xl:w-[190px]  sm:h-[74px] border border-[#FFFFFF80] rounded-md"
+                                className="flex items-center justify-center sm:gap-4 flex-col sm:flex-row w-[90px] h-auto p-[10px] gap-2 sm:w-[160px] xl:w-[180px] 2xl:w-[190px]  sm:h-[74px] border border-[#FFFFFF80] rounded-md"
                                 style={{
                                     background: "#FFFFFF1F",
                                     backdropFilter: "blur(12px)",

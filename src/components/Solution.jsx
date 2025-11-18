@@ -12,7 +12,7 @@ export default function Solution() {
         { img: '/assets/images/mobile-app/solutions/food.svg', txt: 'Food & Restaurant' },
     ]
     return (
-        <div className="container mx-auto section container_content py-12 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto section container_content">
             <h1
                 className="max-w-[900px] mx-auto text-[26px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-center text-[#02021E] relative leading-snug"
             >

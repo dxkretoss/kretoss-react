@@ -4,7 +4,7 @@ import Form from "./Form";
 export default function SuccessTogather() {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <div className="container container_content section mx-auto px-4 py-16">
+        <div className="container container_content section mx-auto">
             <div
                 className="relative rounded-[24px] border border-[#5D59EACC] flex flex-col justify-center items-center text-center px-6 sm:px-8 md:px-12 lg:px-20 xl:px-28 py-10 sm:py-12 md:py-16"
                 style={{

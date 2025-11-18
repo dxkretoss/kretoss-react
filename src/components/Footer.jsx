@@ -13,7 +13,7 @@ export default function Footer() {
                 background: "linear-gradient(99.21deg, #343284 0.29%, #5D59EA 99.71%)",
             }}
         >
-            <div className="container mx-auto px-6 sm:px-8 md:px-10 lg:px-14 xl:px-20 2xl:px-32">
+            <div className="container mx-auto container_content">
                 {/* Top Section */}
                 <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 xl:gap-20 2xl:gap-24">
                     {/* Left Card */}

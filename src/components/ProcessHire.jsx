@@ -25,7 +25,7 @@ export default function ProcessHire() {
     ]
 
     return (
-        <div className="container section mx-auto container_content px-4 py-16">
+        <div className="container section mx-auto container_content">
             <div className="relative flex flex-col items-center text-center xl:w-[900px] 2xl:w-[900px] mx-auto">
                 <h1
                     className="text-[26px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-[#02021E] leading-snug relative"

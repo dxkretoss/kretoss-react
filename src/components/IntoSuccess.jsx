@@ -80,7 +80,7 @@ export default function IntoSuccess() {
     // -------------------------------------------------------------------
 
     return (
-        <div className="container section container_content mx-auto px-4 xl:px-12 py-12 sm:py-16">
+        <div className="container section container_content mx-auto">
 
             {/* Heading */}
             <div className="max-w-[900px] mx-auto text-center px-2">

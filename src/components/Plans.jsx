@@ -51,7 +51,7 @@ export default function Plans() {
     const [activePlan, setActivePlan] = useState("Quarterly Plan");
 
     return (
-        <div className="relative container section container_content mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-10">
+        <div className="relative container section container_content mx-auto">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
                 <h1
                     className="text-[28px] sm:text-[34px] md:text-[40px] 2xl:text-[48px] font-semibold text-[#02021ECC] relative"
@@ -120,7 +120,7 @@ function PlanCard({ plan, isActive, setActivePlan }) {
 
     return (
         <div
-            className={`w-full lg:w-[30%] mt-10 sm:mt-16 rounded-2xl bg-white border p-6 sm:p-8 flex flex-col items-center justify-center transition-all duration-300 
+            className={`w-full lg:w-[32%] mt-10 sm:mt-16 rounded-2xl bg-white border p-6 sm:p-8 flex flex-col items-center justify-center transition-all duration-300 
                 ${isActive
                     ? "border-[#5D59EA80] shadow-[0px_0px_25px_0px_#5D59EA99]"
                     : "border-[#02021E33]"

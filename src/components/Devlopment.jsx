@@ -32,7 +32,7 @@ export default function Devlopment() {
     ];
 
     return (
-        <div className="relative container section container_content mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 py-12 md:py-20">
+        <div className="relative container section container_content mx-auto w-full">
             <div className="max-w-[900px] 2xl:max-w-[1300px] mx-auto text-center px-2">
                 <h1
                     className="text-[26px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-center text-[#02021E] leading-snug md:leading-tight relative mb-6"

@@ -6,7 +6,7 @@ export default function GlobalExp() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="container section container_content mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 py-12 md:py-20">
+        <div className="container section container_content mx-auto w-full">
 
             <div
                 className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12 

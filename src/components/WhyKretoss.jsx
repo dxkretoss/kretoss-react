@@ -75,7 +75,7 @@ export default function WhyKretoss() {
 
 
     return (
-        <div className="relative container section mx-auto container_content px-4 py-16">
+        <div className="relative container section mx-auto container_content">
             <div
                 className="w-full max-w-[1620px] mx-auto rounded-[26px] p-6 sm:p-8 md:p-10 lg:p-14"
                 style={{
