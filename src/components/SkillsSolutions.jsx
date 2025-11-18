@@ -120,7 +120,7 @@ export default function SkillsSolutions() {
             </div>
 
             <div className="relative pb-[50px] overflow-visible ">
-                <div className="relative z-10 max-w-[1460px] gap-2 px-[30px] py-[19px] mx-auto h-[80px] 2xl:h-[100px] rounded-[100px] bg-[#5D59EA] mt-[50px] flex justify-between items-center overflow-x-auto overflow-y-hidden scrollbar-hide">
+                <div className="relative z-10 max-w-[1460px] gap-2 px-[15px] xl:px-[20px] py-[20px] mx-auto h-[80px] 2xl:h-[100px] rounded-[100px] bg-[#5D59EA] mt-[50px] flex justify-between items-center overflow-x-auto overflow-y-hidden scrollbar-hide">
                     {Object.keys(categories).map((tab) => (
                         <button
                             key={tab}

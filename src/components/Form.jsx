@@ -22,18 +22,120 @@ export default function Form({ title, buttontext, onClose, plan }) {
         });
     };
 
-    const allowedDomains = ["gmail.com", "yahoo.com", "outlook.com"];
+    const blockedTempDomains = [
+        "0-mail.com", "0815.ru", "0clickemail.com", "0wnd.net", "0wnd.org",
+        "10minutemail.com", "10minutemail.net", "10minutemail.org", "10minutemail.us",
+        "10minutemailbox.com", "10minute-email.com", "10minutesmail.com",
+        "10minmail.de", "123mail.org", "1ce.us", "1mail.ml", "1pad.de",
+        "20minutemail.com", "21cn.com", "2prong.com", "33mail.com",
+        "3mail.ga", "3mail.gq", "3mail.ml", "4mail.cf", "4mail.ga", "4warding.com",
+        "4warding.net", "4warding.org", "55mail.xyz", "5mail.cf", "5mail.ga",
+        "60minutemail.com", "675hosting.com", "675hosting.net", "675hosting.org",
+        "6mail.ml", "7tags.com", "9ox.net", "a-bc.net", "amail.com", "abuser.eu",
+        "abyssmail.com", "afrobacon.com", "ajaxapp.net", "akamaimail.com",
+        "anon-mail.de", "anonbox.net", "anonymbox.com", "antireg.ru", "armyspy.com",
+        "artman-conception.com", "azazazatashkent.tk",
+        "balanc3r.com", "bareed.ws", "baxomale.ht", "beefmilk.com", "bigprofessor.so",
+        "bigstring.com", "binkmail.com", "bio-muesli.net", "bitmails.net",
+        "blockfilter.com", "bobmail.info", "bodhi.lawl", "bofthew.com",
+        "bootybay.de", "boxformail.in", "brefmail.com", "bspamfree.org", "bugmenot.com",
+        "casualdx.com", "centermail.com", "centermail.net", "chammy.info",
+        "cheatmail.de", "childsavetrust.org", "chithinh.com",
+        "choicemail1.com", "cool.fr.nf", "courrieltemporaire.com",
+        "cuoly.com", "cust.in", "cyber-email.io", "czqjii8.com",
+        "deadaddress.com", "deadspam.com", "decoymail.com", "despam.it",
+        "disposableaddress.com", "disposableemailaddresses.com", "dispo.in",
+        "dodgit.com", "dodgit.org", "dontreg.com", "dontsendmespam.de", "dropmail.me",
+        "e-mail.com", "easymail.now", "easytrashmail.com", "email-fake.com",
+        "email.net", "email60.com", "emailtemporanea.com", "emailtemporario.com.br",
+        "emailthe.net", "emailtmp.com", "emailto.de", "ephemail.net", "etranquil.com",
+        "fakeemail.com", "fakeinbox.com", "fakemail.net", "fakemailgenerator.com",
+        "falkh.net", "filzmail.com", "fishfuse.com", "flyspam.com", "freetmail.net",
+        "garliclife.com", "getairmail.com", "getnada.com", "getonemail.com",
+        "girlmail.win", "guerrillamail.biz", "guerrillamail.com",
+        "guerrillamail.de", "guerrillamail.info", "guerrillamail.net",
+        "guerrillamail.org", "guerrillamailblock.com",
+        "h8s.org", "haltospam.com", "hazelnut4u.com", "hermes.bet",
+        "hidemyass.com", "hidzz.com", "hmamail.com", "hochsitze.com",
+        "hot-mail.gq", "hotmai.com", "hotmial.com", "hulapla.de",
+        "ieatspam.eu", "iheartspam.org", "incognitomail.com", "incognitomail.net",
+        "incognitomail.org", "infocom.zp.ua", "instantemailaddress.com",
+        "ip4.pp.ua", "irish2me.com", "ispuntheweb.com", "iwi.net",
+        "jetable.org", "jnxjn.com", "jourrapide.com", "junkmail.ga", "junkmail.gq",
+        "kasmail.com", "kickmark.com", "klassmaster.com", "klzlk.com",
+        "letthemeatspam.com", "lifetotech.com", "link2mail.net", "lol.ovpn.to",
+        "lolfreak.net", "lookugly.com", "lortemail.dk", "lr7.us", "luv2.us",
+        "mail-temporaire.fr", "mail.by", "mail.mezimages.net", "mail.zp.ua",
+        "mail1a.de", "mail21.cc", "mail2rss.org", "mail333.com", "mailbidon.com",
+        "mailcatch.com", "maileater.com", "mailexpire.com", "mailguard.me",
+        "mailimate.com", "mailin8r.com", "mailinator.com", "mailinator.net",
+        "mailinator.org", "mailinator.us", "mailinator2.com", "mailincubator.com",
+        "mailismagic.com", "mailjunk.ga", "mailjunk.gq", "mailjunk.ml",
+        "mailme.dk", "mailme24.com", "mailmetrash.com", "mailmoat.com",
+        "mailnator.com", "mailnesia.com", "mailnull.com", "mailorc.com",
+        "mailpick.biz", "mailpoof.com", "mailrock.biz", "mailscrap.com",
+        "mailshell.com", "mailsiphon.com", "mailslapping.com", "mailtemp.info",
+        "mailtothis.com", "mailtrash.net", "mailtv.net", "mailtv.org",
+        "mailzilla.com", "mailzilla.org", "makemetheking.com",
+        "messagebeamer.de", "mfsa.ru", "mierdamail.com", "migmail.net", "migmail.org",
+        "mintemail.com", "moburl.com", "moncourrier.fr.nf", "monemail.fr.nf",
+        "monmail.fr.nf", "msh.mobi", "mt2009.com", "mx0.wwwnew.eu",
+        "mypartyclip.de", "mytrashmail.com", "mytemp.email", "my10minutemail.com",
+        "nepwk.com", "noclickemail.com", "nospam.ze.tc", "nospam4.us",
+        "notmailinator.com", "nowmymail.com", "nwytg.net", "nzh.in", "obfusko.com",
+        "opayq.com", "otherinbox.com", "ovpn.to", "owlpic.com",
+        "p0q.org", "pjjkp.com", "poofy.org", "pookmail.com", "privacy.net",
+        "proxymail.eu", "putthisinyourspamdatabase.com", "qq.com.de", "r4nd0m.de",
+        "ra3.us", "rcpt.at", "reallymymail.com", "recyclemail.dk", "regbypass.com",
+        "regbypass.comsafe-mail.net", "rejectmail.com", "rhyta.com",
+        "sharklasers.com", "shieldemail.com", "shiftmail.com", "shitmail.org",
+        "shmeriously.com", "shut.name", "sify.com", "slapsfromlastnight.com",
+        "slushmail.com", "smapfree24.com", "smashmail.de", "smellfear.com",
+        "snapmail.cc", "sneakemail.com", "sneakmail.de", "softpls.asia",
+        "sofortmail.de", "spam.la", "spam.su", "spam4.me", "spamail.de",
+        "spamcannon.com", "spamcannon.net", "spamcon.org", "spamcorptastic.com",
+        "spamcowboy.com", "spamcowboy.net", "spamcowboy.org", "spamday.com",
+        "spamex.com", "spamfree.eu", "spamfree24.de", "spamfree24.org",
+        "spamgoes.in", "spamgourmet.com", "spamhole.com", "spamhornet.com",
+        "spaminator.de", "spamkill.info", "spaml.com", "spaml.de", "spammotel.com",
+        "spamobox.com", "spamoff.de", "spamslicer.com", "spamspot.com",
+        "spamthis.co.uk", "spamthisplease.com", "spoofmail.de", "stuffmail.de",
+        "supergreatmail.com", "supermailer.jp", "supramail.com", "sweetville.net",
+        "tagyourself.com", "talkinator.com", "teewars.org", "temp-mail.io",
+        "temp-mail.org", "temp-mail.ru", "tempail.com", "tempemail.biz",
+        "tempemail.co.za", "tempemail.net", "tempinbox.com", "tempmail.de",
+        "tempmail.it", "tempmail.us", "tempmailer.com", "tempmailer.de",
+        "temporaryemail.net", "temporarystuff.com", "tempymail.com", "thanksnospam.info",
+        "theaperturelabs.com", "thelimestones.com", "thisisnotmyrealemail.com",
+        "throwam.com", "throwawayemailaddress.com", "tmail.com", "tmail.io", "tmail.ws",
+        "trash-mail.at", "trash-mail.com", "trash-mail.de", "trashcanmail.com",
+        "trashmail.com", "trashmail.de", "trashmail.net", "trashmails.com",
+        "trashymail.com", "trashymail.net", "trbvm.com", "trbvn.com", "trbvo.com",
+        "uemail99.com", "uggsrock.com", "upliftnow.com", "uplipht.com",
+        "vmani.com", "vomoto.com", "vpn.st", "vps30.com", "wasteland.rfc822.org",
+        "webemail.me", "wegwerfadresse.de", "wegwerfemail.de", "wegwerfmail.de",
+        "wegwerfmail.net", "wegwerfmail.org", "whatpaas.com", "whiffles.org",
+        "whyspam.me", "willselfdestruct.com", "winemaven.info", "wiroute.com",
+        "wuzup.net", "wuzupmail.net", "www.com", "xcoxc.com", "xemaps.com",
+        "xents.com", "xmaily.com", "xoxy.net", "xyzfree.net", "yanet.me",
+        "yepmail.net", "yoggmail.com", "yopmail.com", "yopmail.fr", "yopmail.net",
+        "yuurok.com", "z1p.biz", "za.com", "zehnminuten.de", "zehnminutenmail.de",
+        "zeta-telecom.com", "zetmail.com", "zoemail.net"
+    ];
+
     const handleSubmit = async () => {
         if (!formData.name.trim()) return toast.error("Name is required");
+
         if (!formData.email.trim()) return toast.error("Email is required");
         if (!/\S+@\S+\.\S+/.test(formData.email))
             return toast.error("Enter a valid email address");
-        const emailDomain = formData.email.split("@")[1];
-        if (!allowedDomains.includes(emailDomain.toLowerCase())) {
-            return toast.error("Please Enter a valid email address ");
+        const domain = formData.email.split("@")[1].toLowerCase();
+        if (blockedTempDomains.includes(domain)) {
+            return toast.error("Enter a valid email address");
         }
+
         if (!formData.phone.trim()) return toast.error("Phone number is required");
-        const cleaned = formData.phone.replace(/\D/g, ""); // keep digits only
+        const cleaned = formData.phone.replace(/\D/g, "");
 
         if (cleaned.length < 8) {
             return toast.error("Enter a valid phone number");
@@ -47,7 +149,9 @@ export default function Form({ title, buttontext, onClose, plan }) {
         if (repeatedPatterns.includes(formData.phone)) {
             return toast.error("Enter a valid phone number");
         }
+
         if (!formData.budget.trim()) return toast.error("Budget is required");
+
         if (!formData.message.trim()) return toast.error("Message is required");
         if (formData.message.length > 1999)
             return toast.error("Message is too large");

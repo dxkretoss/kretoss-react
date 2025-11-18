@@ -185,7 +185,7 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className="relative w-full sm:w-[80%] md:w-[70%] lg:w-[45%] flex justify-center items-center mt-8 lg:mt-0">
+                <div className="relative w-full h-[400px] lg:w-[40%] lg:h-auto flex justify-center items-center mt-8 lg:mt-0 px-4">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentCountry.countryName}
@@ -193,38 +193,58 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -50 }}
                             transition={{ duration: 0.6 }}
-                            className="relative h-[450px] w-full max-w-[400px] sm:max-w-[500px] md:max-w-[550px] lg:max-w-[600px] xl:max-w-[700px] bg-gradient-to-b from-[#FFFFFF] to-[#CFE6FF] border border-[#22222224] rounded-2xl p-6 sm:p-8 shadow-xl text-center"
+                            className="
+                                    relative 
+                                    w-full 
+                                    max-w-[650px]
+                                    bg-gradient-to-b 
+                                    from-[#FFFFFF] 
+                                    to-[#CFE6FF] 
+                                    border border-[#22222224] 
+                                    rounded-2xl 
+                                    p-6 sm:p-8 
+                                    shadow-xl 
+                                    text-center
+                                "
                         >
+                            {/* Top row (flags + logo) */}
                             <div className="flex justify-between items-center">
                                 <img
                                     src={currentCountry.smallLogo}
                                     alt={currentCountry.countryName}
-                                    className="w-[40px] 2xl:w-[70px]"
+                                    className="w-[40px] sm:w-[50px] 2xl:w-[70px]"
                                 />
+
                                 <img
                                     src="/assets/images/mobile-app/logo.svg"
-
-                                    className="w-[120px] 2xl:w-[150px]"
+                                    className="w-[110px] sm:w-[130px] 2xl:w-[150px]"
                                     alt="logo"
                                 />
                             </div>
 
-                            <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center mt-[40px] sm:mt-[50px] gap-6 sm:gap-8">
+                            {/* Middle content */}
+                            <div className="
+                                flex 
+                                flex-col sm:flex-row 
+                                justify-center sm:justify-between 
+                                items-center 
+                                mt-10 
+                                gap-6 sm:gap-10
+                            ">
                                 <img
                                     src={currentCountry.mapLogo}
                                     alt={currentCountry.countryName}
-                                    className="w-[150px] sm:w-[180px] md:w-[200px]"
+                                    className="w-[150px] sm:w-[180px] lg:w-[200px] 2xl:w-[230px]"
                                 />
+
                                 <div className="flex flex-col text-center sm:text-left">
-                                    <span className="text-[26px] sm:text-[32px] text-[#02021E] font-medium">
+                                    <span className="text-[24px] md:text-[24px] 2xl:text-[32px] text-[#02021E] font-medium">
                                         {currentCountry.countryName}
                                     </span>
-                                    <div>
-                                        <span className="text-[26px] sm:text-[32px] text-[#02021E] font-bold">
-                                            {currentCountry.hourlyPrice}/
-                                        </span>
-                                        <span className="text-[18px] sm:text-[22px] text-[#02021E] ml-1">
-                                            hour
+
+                                    <div className="flex items-center justify-center sm:justify-start">
+                                        <span className="text-[24px] md:text-[24px] 2xl:text-[32px] text-[#02021E] font-bold">
+                                            {currentCountry.hourlyPrice}/ hour
                                         </span>
                                     </div>
                                 </div>
@@ -232,6 +252,7 @@ export default function Hero() {
                         </motion.div>
                     </AnimatePresence>
                 </div>
+
             </div>
         </section>
     );
