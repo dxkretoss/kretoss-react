@@ -104,7 +104,7 @@ export default function Hero() {
                         <span className="text-[#02021E] text-[16px] md:text-[20px] xl:text-[24px] 2xl:text-[32px] font-semibold ml-1">
                             $22.00/
                         </span>
-                        <span className="text-[#222222] text-[15px] 2xl:text-[18px] ml-1 items-end">
+                        <span className="text-[#222222] mt-[2px] lg:mt-[5px] 2xl:mt-[10px] text-[12px] md:text-[14px] 2xl:text-[18px] ml-1 items-end">
                             hour
                         </span>
                         <button
