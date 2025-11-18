@@ -41,7 +41,7 @@ export default function Devlopment() {
                     <span className="relative inline-block text-[#5D59EA]">
                         Expertise and Quality
                         <img
-                            src="/assets/images/mobile-app/underline.svg"
+                            src={process.env.PUBLIC_URL + "/assets/images/mobile-app/underline.svg"}
                             alt=""
 
                             className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[6px] sm:translate-y-[8px] md:translate-y-[12px]"

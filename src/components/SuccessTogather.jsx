@@ -31,8 +31,7 @@ export default function SuccessTogather() {
                         style={{ boxShadow: "13px 14px 40px 0px #27628326" }}
                     >
                         <img
-                            src="/assets/images/mobile-app/misson.svg"
-
+                            src={process.env.PUBLIC_URL + "/assets/images/mobile-app/misson.svg"}
                             alt="Mission"
                             className="absolute -top-6 sm:-top-7 w-[40px] sm:w-[50px] md:w-[55px]"
                         />

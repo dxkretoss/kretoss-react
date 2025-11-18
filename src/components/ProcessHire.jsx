@@ -34,7 +34,7 @@ export default function ProcessHire() {
                     <span className="relative inline-block text-[#5D59EA]">
                         Process to Hire
                         <img
-                            src="/assets/images/mobile-app/underline.svg"
+                            src={process.env.PUBLIC_URL + "/assets/images/mobile-app/underline.svg"}
 
                             alt=""
                             className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[12px]"
@@ -51,11 +51,11 @@ export default function ProcessHire() {
                     style={{ top: '-10px', right: '-200px' }}
                 >
                     <div
-                        className="relative w-[160px] sm:w-[180px] md:w-[200px] lg:w-[218px] h-[90px] lg:h-[95px] xl:h-[100px] 2xl:h-[122px] bg-white rounded-[10px] flex flex-col items-center justify-center shadow-lg"
+                        className="relative w-[160px] sm:w-[180px] md:w-[200px] lg:w-[218px] h-[90px]  xl:h-[110px] 2xl:h-[122px] bg-white rounded-[10px] flex flex-col items-center justify-center shadow-lg"
                         style={{ boxShadow: "13px 14px 40px 0px #27628326" }}
                     >
                         <img
-                            src="/assets/images/mobile-app/Vision.svg"
+                            src={process.env.PUBLIC_URL + "/assets/images/mobile-app/Vision.svg"}
 
                             alt="Vision"
                             className="absolute -top-6 sm:-top-7 w-[40px] sm:w-[50px] md:w-[55px]"
@@ -79,7 +79,7 @@ export default function ProcessHire() {
                         className="flex flex-col items-center text-center sm:items-start sm:text-start bg-white rounded-[20px] py-5 px-3 sm:p-8 w-full sm:w-[300px] md:w-[320px] lg:w-[280px] xl:w-[320px] transition-all duration-300"
                     >
                         <img
-                            src={item.img}
+                            src={process.env.PUBLIC_URL + item.img}
                             alt={item.txt}
 
                             className="w-[64px] h-auto"

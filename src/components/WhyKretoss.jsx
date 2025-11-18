@@ -108,7 +108,7 @@ export default function WhyKretoss() {
                                         }}
                                     >
                                         <img
-                                            src="/assets/images/mobile-app/points.svg"
+                                            src={process.env.PUBLIC_URL + "/assets/images/mobile-app/points.svg"}
                                             className="w-[24px] xl:w-[28px] 2xl:w-[32px] h-[24px] xl:h-[28px] 2xl:h-[32px]"
                                             alt="point"
                                         />
@@ -120,7 +120,7 @@ export default function WhyKretoss() {
                             </div>
 
                             <img
-                                src={card.img}
+                                src={process.env.PUBLIC_URL + card.img}
                                 className="absolute -top-6 -right-10 w-[100px] h-[100px]"
                                 alt=""
                             />

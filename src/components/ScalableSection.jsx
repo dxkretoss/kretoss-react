@@ -61,8 +61,7 @@ export default function ScalableSection() {
                         <span className="relative inline-block text-[#5D59EA]">
                             Scalable, Innovative
                             <img
-                                src="/assets/images/mobile-app/underline.svg"
-
+                                src={process.env.PUBLIC_URL + "/assets/images/mobile-app/underline.svg"}
                                 alt=""
                                 className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[8px] sm:translate-y-[12px]"
                             />
@@ -124,7 +123,7 @@ export default function ScalableSection() {
                     <div className='hidden lg:flex lg:flex-col'>
                         <div className="flex lg:mt-[20px] 2xl:mt-[30px]">
                             <div className='flex h-[136px] w-[296px] border-r border-b border-[#0000001A] p-5'>
-                                <img src="/assets/images/mobile-app/mob-app.svg" alt="" className='w-[53px] h-[53px]' />
+                                <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mob-app.svg"} alt="" className='w-[53px] h-[53px]' />
                                 <div className='ml-[22px] w-[144px]'>
                                     <p className="text-[28px] font-semibold text[#000000]"> <CountUpNumber target={200} />+</p>
                                     <p className="text-[#000000] text-[15px]">Mobile Apps Delivered</p>
@@ -132,7 +131,7 @@ export default function ScalableSection() {
                             </div>
 
                             <div className='flex h-[136px] w-[296px] border-b border-[#0000001A] p-5'>
-                                <img src="/assets/images/mobile-app/bussines.svg" alt="" className='w-[53px] h-[53px]' />
+                                <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/bussines.svg"} alt="" className='w-[53px] h-[53px]' />
                                 <div className='ml-[22px] w-[144px]'>
                                     <p className="text-[28px] font-semibold text[#000000]">$<CountUpNumber target={1} decimals={1} />B+</p>
                                     <p className="text-[#000000] text-[15px]">Business Impact for Our Clients</p>
@@ -141,7 +140,7 @@ export default function ScalableSection() {
                         </div>
                         <div className="flex">
                             <div className='flex h-[136px] w-[296px] border-r border-[#0000001A] p-8'>
-                                <img src="/assets/images/mobile-app/review.svg" alt="" className='w-[53px] h-[53px]' />
+                                <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/review.svg"} alt="" className='w-[53px] h-[53px]' />
                                 <div className='ml-[22px] w-[144px]'>
                                     <p className="text-[28px] font-semibold text[#000000]"><CountUpNumber target={600} />+</p>
                                     <p className="text-[#000000] text-[15px]">Five-Star Client Reviews</p>
@@ -149,7 +148,7 @@ export default function ScalableSection() {
                             </div>
 
                             <div className='flex h-[136px] w-[296px] p-8'>
-                                <img src="/assets/images/mobile-app/award.svg" alt="" className='w-[53px] h-[53px]' />
+                                <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/award.svg"} alt="" className='w-[53px] h-[53px]' />
                                 <div className='ml-[22px] w-[144px]'>
                                     <p className="text-[28px] font-semibold text[#000000]"><CountUpNumber target={11} />+</p>
                                     <p className="text-[#000000] text-[15px]">Awards for Kretoss</p>
@@ -172,45 +171,45 @@ export default function ScalableSection() {
                     {/* Column 1 */}
                     <div className="scroll-column">
                         <div className="scroll-inner">
-                            <img src="/assets/images/mobile-app/mobile/mob-1.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-2.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-1.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-2.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-1.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-2.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-1.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-2.png" />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-1.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-2.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-1.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-2.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-1.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-2.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-1.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-2.png"} />
                         </div>
                     </div>
 
                     {/* Column 2 */}
                     <div className="scroll-column">
                         <div className="scroll-inner scroll-inner-delay">
-                            <img src="/assets/images/mobile-app/mobile/mob-3.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-4.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-5.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-3.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-4.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-5.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-3.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-4.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-5.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-3.png" />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-3.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-4.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-5.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-3.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-4.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-5.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-3.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-4.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-5.png"} />
                         </div>
                     </div>
 
                     {/* Column 3 */}
                     <div className="scroll-column">
                         <div className="scroll-inner">
-                            <img src="/assets/images/mobile-app/mobile/mob-6.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-7.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-6.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-7.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-6.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-7.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-6.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-7.png" />
-                            <img src="/assets/images/mobile-app/mobile/mob-6.png" />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-6.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-7.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-6.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-7.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-6.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-7.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-6.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-7.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-6.png"} />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/mobile/mob-7.png"} />
                         </div>
                     </div>
                 </div>

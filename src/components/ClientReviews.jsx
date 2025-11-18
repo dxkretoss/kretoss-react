@@ -143,7 +143,7 @@ export default function ClientReviews() {
                 <span className="relative inline-block text-[#5D59EA]">
                     Global Client
                     <img
-                        src="/assets/images/mobile-app/underline.svg"
+                        src={process.env.PUBLIC_URL + "/assets/images/mobile-app/underline.svg"}
                         alt=""
                         className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[12px]"
                     />
@@ -200,11 +200,10 @@ export default function ClientReviews() {
                                     {[...Array(5)].map((_, i) => (
                                         <img
                                             key={i}
-
                                             src={
                                                 i < review.rating
-                                                    ? "/assets/images/mobile-app/reviews/fillstar.svg"
-                                                    : "/assets/images/mobile-app/reviews/unfillstar.svg"
+                                                    ? process.env.PUBLIC_URL + "/assets/images/mobile-app/reviews/fillstar.svg"
+                                                    : process.env.PUBLIC_URL + "/assets/images/mobile-app/reviews/unfillstar.svg"
                                             }
                                             alt="star"
                                             className="w-[20px] h-[20px]"
@@ -214,7 +213,7 @@ export default function ClientReviews() {
 
                                 <div className="mt-[20px] flex justify-center md:justify-start gap-[10px] items-center">
                                     <img
-                                        src={review.clientImage}
+                                        src={process.env.PUBLIC_URL + review.clientImage}
 
                                         className="w-[45px] border-2 border-[#FFFFFF] rounded-full"
                                         alt={review.clientName}
@@ -232,7 +231,7 @@ export default function ClientReviews() {
 
                             <div className="w-full lg:w-[60%]">
                                 <img
-                                    src={review.reviewImage}
+                                    src={process.env.PUBLIC_URL + review.reviewImage}
 
                                     className="rounded-[16px] h-full w-full object-cover"
                                     alt={review.clientName}
@@ -249,7 +248,7 @@ export default function ClientReviews() {
                         boxShadow: "0px 6px 20px -6px #1E2E4826",
                     }}
                 >
-                    <img src="/assets/images/mobile-app/reviews/left.svg" alt="Previous" />
+                    <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/reviews/left.svg"} alt="Previous" />
                 </button>
 
                 <button
@@ -259,7 +258,7 @@ export default function ClientReviews() {
                         boxShadow: "0px 6px 20px -6px #1E2E4826",
                     }}
                 >
-                    <img src="/assets/images/mobile-app/reviews/right.svg" alt="Next" />
+                    <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/reviews/right.svg"} alt="Next" />
                 </button>
             </div>
         </div>

@@ -8,7 +8,7 @@ export function ImagesMarquee({ images }) {
             {images.map((src, i) => (
                 <img
                     key={i}
-                    src={src}
+                    src={process.env.PUBLIC_URL + src}
                     alt={`mob-${i}`}
 
                     className="h-[400px] shrink-0"

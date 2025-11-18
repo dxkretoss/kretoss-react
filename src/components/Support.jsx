@@ -68,7 +68,7 @@ export default function Support() {
     };
 
     return (
-        <div className="relative container section container_content mx-auto min-h-[570px] 2xl:h-[690px] rounded-[24px]">
+        <div className="relative container section container_content mx-auto min-h-[570px] rounded-[24px]">
             <div
                 className="w-full max-w-[1620px] mx-auto rounded-[26px] p-4 sm:p-8 md:p-10 lg:p-14"
                 style={{
@@ -171,7 +171,7 @@ export default function Support() {
                         style={{ boxShadow: "13px 14px 40px 0px #27628326" }}
                     >
                         <img
-                            src="/assets/images/mobile-app/Qsupport.svg"
+                            src={process.env.PUBLIC_URL + "/assets/images/mobile-app/Qsupport.svg"}
 
                             alt="Quick Support"
                             className="absolute -top-5"

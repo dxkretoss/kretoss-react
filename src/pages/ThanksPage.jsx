@@ -5,12 +5,12 @@ export default function ThanksPage() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center gap-8 bg-[#efffef] text-center px-4">
             <img
-                src="/assets/images/mobile-app//logo.svg"
+                src={process.env.PUBLIC_URL + "/assets/images/mobile-app/logo.svg"}
                 alt="Kretoss Technology"
             />
 
             <img
-                src="/assets/images/mobile-app/points.svg"
+                src={process.env.PUBLIC_URL + "/assets/images/mobile-app/points.svg"}
                 alt="Kretoss Technology"
                 className='w-[100px]'
             />

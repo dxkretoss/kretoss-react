@@ -62,9 +62,9 @@ export default function Faqs() {
                                 </span>
                                 <span className="transition-transform duration-300 ml-4 flex-shrink-0">
                                     {activeIndex === index ? (
-                                        <img src="/assets/images/mobile-app/downaero.svg" alt="collapse" />
+                                        <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/downaero.svg"} alt="collapse" />
                                     ) : (
-                                        <img src="/assets/images/mobile-app/rightaero.svg" alt="expand" />
+                                        <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/rightaero.svg"} alt="expand" />
                                     )}
                                 </span>
                             </button>

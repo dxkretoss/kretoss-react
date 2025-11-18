@@ -10,7 +10,9 @@ export default function Header() {
         <header className="bg-[#FFFFFF] h-[80px] 2xl:h-[100px] flex items-center relative shadow-sm w-full">
             <div className="container mx-auto px-4 flex justify-between items-center w-full">
                 <div className="flex items-center">
-                    <img src="/assets/images/mobile-app//logo.svg" alt="Kretoss" className="w-[160px]" />
+                    <img
+                        src={process.env.PUBLIC_URL + "/assets/images/mobile-app/logo.svg"}
+                        alt="Kretoss" className="w-[160px]" />
                 </div>
 
                 <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 text-center">
@@ -64,7 +66,9 @@ export default function Header() {
                 <div className="fixed inset-0 bg-black/40 z-50">
                     <div className="fixed right-0 top-0 h-full w-[260px] bg-white shadow-lg p-6 flex flex-col  transition-transform duration-300 ease-in-out">
                         <div className="flex justify-between items-center mb-6">
-                            <img src="/assets/images/mobile-app//logo.svg" alt="Kretoss" className="w-[130px]" />
+                            <img
+                                src={process.env.PUBLIC_URL + "/assets/images/mobile-app/logo.svg"}
+                                alt="Kretoss" className="w-[130px]" />
                             <button
                                 onClick={() => setIsSidebarOpen(false)}
                                 className="text-gray-600 text-2xl"

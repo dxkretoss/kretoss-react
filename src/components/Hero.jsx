@@ -71,7 +71,7 @@ export default function Hero() {
         <section
             className="relative bg-cover bg-center bg-no-repeat flex items-center justify-center text-white py-16 md:py-24 lg:py-0"
             style={{
-                backgroundImage: "url('/assets/images/mobile-app/herobg.svg')",
+                backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/mobile-app/herobg.svg)`,
                 minHeight: "800px",
             }}
         >
@@ -97,8 +97,7 @@ export default function Hero() {
                             Starting at
                         </span>
                         <img
-                            src="/assets/images/mobile-app/clock.svg"
-
+                            src={process.env.PUBLIC_URL + "/assets/images/mobile-app/clock.svg"}
                             className="ml-[5px] 2xl:ml-[15px] w-[20px] sm:w-[28px]"
                         />
                         <span className="text-[#02021E] text-[16px] md:text-[20px] xl:text-[24px] 2xl:text-[32px] font-semibold ml-1">
@@ -141,7 +140,7 @@ export default function Hero() {
                                 }}
                             >
                                 <img
-                                    src={item.icon}
+                                    src={process.env.PUBLIC_URL + item.icon}
                                     alt={item.label}
                                     className="w-[24px] 2xl:w-[32px]"
                                 />
@@ -174,8 +173,7 @@ export default function Hero() {
                                         }`}
                                 >
                                     <img
-                                        src={src}
-
+                                        src={process.env.PUBLIC_URL + src}
                                         className="w-[50px] sm:w-[100px] h-[35px] sm:h-[50px]"
                                         alt="trusted brand"
                                     />
@@ -210,13 +208,13 @@ export default function Hero() {
                             {/* Top row (flags + logo) */}
                             <div className="flex justify-between items-center">
                                 <img
-                                    src={currentCountry.smallLogo}
+                                    src={process.env.PUBLIC_URL + currentCountry.smallLogo}
                                     alt={currentCountry.countryName}
                                     className="w-[40px] sm:w-[50px] 2xl:w-[70px]"
                                 />
 
                                 <img
-                                    src="/assets/images/mobile-app/logo.svg"
+                                    src={process.env.PUBLIC_URL + "/assets/images/mobile-app/logo.svg"}
                                     className="w-[110px] sm:w-[130px] 2xl:w-[150px]"
                                     alt="logo"
                                 />
@@ -232,7 +230,7 @@ export default function Hero() {
                                 gap-6 sm:gap-10
                             ">
                                 <img
-                                    src={currentCountry.mapLogo}
+                                    src={process.env.PUBLIC_URL + currentCountry.mapLogo}
                                     alt={currentCountry.countryName}
                                     className="w-[150px] sm:w-[180px] lg:w-[200px] 2xl:w-[230px]"
                                 />

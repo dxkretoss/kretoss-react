@@ -20,8 +20,7 @@ export default function Solution() {
                 <span className="relative inline-block text-[#5D59EA]">
                     Mobile Solutions.
                     <img
-                        src="/assets/images/mobile-app/underline.svg"
-
+                        src={process.env.PUBLIC_URL + "/assets/images/mobile-app/underline.svg"}
                         alt=""
                         className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[8px] sm:translate-y-[12px]"
                     />
@@ -40,10 +39,10 @@ export default function Solution() {
                 {solutionData.map((item, index) => (
                     <div
                         key={index}
-                        className="flex flex-col items-center  bg-white border border-[#22222224] rounded-[22px] p-5 sm:p-6 w-full h-[160px] sm:h-[180px]"
+                        className="flex flex-col items-center  bg-white border border-[#22222224] rounded-[22px] p-5 sm:p-6 w-full h-[160px] sm:h-[200px]"
                         style={{ boxShadow: '0px 0px 21px 0px #0000001A' }}
                     >
-                        <img src={item.img} className="w-[50px] sm:w-[42px] 2xl:w-[62px] h-[50px] sm:h-[62px]" />
+                        <img src={process.env.PUBLIC_URL + item.img} className="w-[50px] sm:w-[42px] 2xl:w-[62px] h-[50px] sm:h-[62px]" />
                         <span className="text-[#02021E] font-medium text-[15px] sm:text-[16px] 2xl:text-[22px] mt-4 sm:mt-5 text-center">
                             {item.txt}
                         </span>

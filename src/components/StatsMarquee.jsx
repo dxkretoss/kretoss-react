@@ -7,7 +7,7 @@ export function StatsMarquee({ stats }) {
         <SmoothMarquee speed={40} className="lg:hidden mt-[40px]">
             {stats.map((item, i) => (
                 <div key={i} className="flex flex-col items-center shrink-0" style={{ width: 220 }}>
-                    <img src={item.icon} alt="" className="w-10 h-10" />
+                    <img src={process.env.PUBLIC_URL + item.icon} alt="" className="w-10 h-10" />
                     <p className="text-[28px] font-semibold mt-[5px]">
                         {item.prefix}{item.value}{item.suffix}
                     </p>

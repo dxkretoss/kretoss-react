@@ -93,7 +93,7 @@ export default function SkillsSolutions() {
                     <span className="relative inline-block text-[#5D59EA]">
                         Top-Quality, High-Performing
                         <img
-                            src="/assets/images/mobile-app/underline.svg"
+                            src={process.env.PUBLIC_URL + "/assets/images/mobile-app/underline.svg"}
                             alt=""
 
                             className="absolute left-1/2 -translate-x-1/2 -bottom-1 translate-y-[12px]"
@@ -111,7 +111,7 @@ export default function SkillsSolutions() {
                             boxShadow: "13px 14px 40px 0px #27628326",
                         }}
                     >
-                        <img src="/assets/images/mobile-app/Highq.svg" alt="Quick Support" className="absolute -top-5" />
+                        <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/Highq.svg"} alt="Quick Support" className="absolute -top-5" />
                         <span className="text-[20px] font-semibold text-[#020817] text-center absolute top-10">
                             Highly Qualified
                         </span>
@@ -143,7 +143,7 @@ export default function SkillsSolutions() {
                             className="flex flex-col items-center gap-2 text-gray-700"
                         >
                             <div className='w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px] flex justify-center items-center bg-[#FFFFFF] border border-[#02021E33] shadow-[#9E9E9E40] rounded-full px-3 py-2 2xl:px-5 2xl:py-4'>
-                                <img src={item.icon} />
+                                <img src={process.env.PUBLIC_URL + item.icon} />
                             </div>
                             <span className="text-[15px] xl:text-[16px] 2xl:text-[20px] font-medium text-[#02021E] mt-[11px] text-center">{item.name}</span>
                         </div>

@@ -59,8 +59,7 @@ export default function Plans() {
                     <span className="relative inline-block text-[#5D59EA]">
                         Estimated Cost
                         <img
-                            src="/assets/images/mobile-app/underline.svg"
-
+                            src={process.env.PUBLIC_URL + "/assets/images/mobile-app/underline.svg"}
                             alt=""
                             className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-3"
                         />
@@ -127,7 +126,7 @@ function PlanCard({ plan, isActive, setActivePlan }) {
                 }`}
         >
             <img
-                src={plan.img}
+                src={process.env.PUBLIC_URL + plan.img}
                 alt={plan.name}
                 className="bg-[#E1E0FF] rounded-full p-4 sm:p-5 w-20 h-20"
             />

@@ -14,7 +14,7 @@ export default function GlobalExp() {
             >
                 <div className="flex-1 text-center lg:text-left max-w-full lg:max-w-[640px]">
                     <img
-                        src="/assets/images/mobile-app/logo.svg"
+                        src={process.env.PUBLIC_URL + "/assets/images/mobile-app/logo.svg"}
                         alt="Logo"
 
                         className="mx-auto lg:mx-0 w-[120px] sm:w-[140px] lg:w-[160px]"
@@ -62,7 +62,7 @@ export default function GlobalExp() {
                 )}
                 <div className="flex-1 flex justify-center lg:justify-end w-full">
                     <img
-                        src="/assets/images/mobile-app/GlobalExp.svg"
+                        src={process.env.PUBLIC_URL + "/assets/images/mobile-app/GlobalExp.svg"}
                         alt="Global Expertise"
 
                         className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-full max-w-[600px] 

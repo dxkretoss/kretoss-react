@@ -130,7 +130,7 @@ export default function IntoSuccess() {
                         </div>
 
                         <div className="bg-[#B2C7FF] min-h-[185px] rounded-[16px] p-4 2xl:p-6 mt-4 2xl:mt-8 w-full flex justify-center items-center">
-                            <img src={card.image} alt={card.title} className="object-contain" />
+                            <img src={process.env.PUBLIC_URL + card.image} alt={card.title} className="object-contain" />
                         </div>
                     </div>
                 ))}
