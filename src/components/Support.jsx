@@ -116,7 +116,7 @@ export default function Support() {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.05 }}
-                                    className="border border-[#22222233] h-[250px] sm:h-auto rounded-[12px] bg-[#FFFFFF] p-[15px] flex-shrink-0"
+                                    className="border border-[#22222233] h-[200px] sm:h-auto rounded-[12px] bg-[#FFFFFF] p-[15px] flex-shrink-0"
                                     style={{
                                         width:
                                             itemsPerPage === 1
