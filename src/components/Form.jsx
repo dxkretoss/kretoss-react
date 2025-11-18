@@ -6,6 +6,7 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 export default function Form({ title, buttontext, onClose, plan }) {
     const router = useNavigate();
+    const [Sending, setSending] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -155,6 +156,7 @@ export default function Form({ title, buttontext, onClose, plan }) {
         if (!formData.message.trim()) return toast.error("Message is required");
         if (formData.message.length > 1999)
             return toast.error("Message is too large");
+        setSending(true);
         try {
             const fillForm = await axios.post(
                 "https://shopifycustom.kretosstechnology.com/api/v1/kretoss/form",
@@ -172,6 +174,8 @@ export default function Form({ title, buttontext, onClose, plan }) {
             }
         } catch (error) {
             console.log("error:", error);
+        } finally {
+            setSending(false)
         }
     };
     return (
@@ -272,10 +276,21 @@ export default function Form({ title, buttontext, onClose, plan }) {
                     onClick={() => {
                         handleSubmit();
                     }}
-                    className="bg-[#5D59EA] text-white w-full font-semibold py-2 rounded-full mt-2 hover:bg-[#4a47d1] transition"
-                    style={{ boxShadow: "0px 0px 22px 0px #5D59EA99" }}
+                    disabled={Sending}
+                    className={`w-full font-semibold py-2 rounded-full mt-2 transition 
+                            ${Sending ? "bg-gray-400 cursor-not-allowed" : "bg-[#5D59EA] hover:bg-[#4a47d1] text-white"}
+                        `}
+                    style={{
+                        boxShadow: Sending ? "none" : "0px 0px 22px 0px #5D59EA99",
+                    }}
                 >
-                    {buttontext}
+                    {Sending ? (
+                        <div className="flex items-center justify-center gap-2">
+                            <span className="loader"></span> Sending...
+                        </div>
+                    ) : (
+                        buttontext
+                    )}
                 </button>
             </div>
         </div>

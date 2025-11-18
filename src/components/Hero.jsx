@@ -4,52 +4,59 @@ import { motion, AnimatePresence } from "framer-motion";
 import Form from "./Form";
 
 const countryData = [
-    {
-        smallLogo: "/assets/images/mobile-app/maps/indiaCountry.svg",
-        mapLogo: "/assets/images/mobile-app/maps/india.svg",
-        countryName: "India",
-        hourlyPrice: "$23.00",
-    },
-    {
-        smallLogo: "/assets/images/mobile-app/maps/austContry.svg",
-        mapLogo: "/assets/images/mobile-app/maps/aust.svg",
-        countryName: "Australia",
-        hourlyPrice: "AUD 150.00",
-    },
-    {
-        smallLogo: "/assets/images/mobile-app/maps/newzealandContry.svg",
-        mapLogo: "/assets/images/mobile-app/maps/newzealand.svg",
-        countryName: "New Zealand",
-        hourlyPrice: "NZD 170.00",
-    },
-    {
-        smallLogo: "/assets/images/mobile-app/maps/usaCountry.svg",
-        mapLogo: "/assets/images/mobile-app/maps/usamap.svg",
-        countryName: "USA",
-        hourlyPrice: "$150.00",
-    },
-    {
-        smallLogo: "/assets/images/mobile-app/maps/europeCountry.svg",
-        mapLogo: "/assets/images/mobile-app/maps/europe.svg",
-        countryName: "Europe",
-        hourlyPrice: "€130.00",
-    },
+    // {
+    //     smallLogo: "/assets/images/mobile-app/maps/indiaCountry.svg",
+    //     mapLogo: "/assets/images/mobile-app/maps/india.svg",
+    //     countryName: "India",
+    //     hourlyPrice: "$23.00",
+    // },
+    // {
+    //     smallLogo: "/assets/images/mobile-app/maps/austContry.svg",
+    //     mapLogo: "/assets/images/mobile-app/maps/aust.svg",
+    //     countryName: "Australia",
+    //     hourlyPrice: "AUD 150.00",
+    // },
+    // {
+    //     smallLogo: "/assets/images/mobile-app/maps/newzealandContry.svg",
+    //     mapLogo: "/assets/images/mobile-app/maps/newzealand.svg",
+    //     countryName: "New Zealand",
+    //     hourlyPrice: "NZD 170.00",
+    // },
+    // {
+    //     smallLogo: "/assets/images/mobile-app/maps/usaCountry.svg",
+    //     mapLogo: "/assets/images/mobile-app/maps/usamap.svg",
+    //     countryName: "USA",
+    //     hourlyPrice: "$150.00",
+    // },
+    // {
+    //     smallLogo: "/assets/images/mobile-app/maps/europeCountry.svg",
+    //     mapLogo: "/assets/images/mobile-app/maps/europe.svg",
+    //     countryName: "Europe",
+    //     hourlyPrice: "€130.00",
+    // },
+
+    { countryName: "USA", map: "/assets/images/mobile-app/maps/usa-map.svg" },
+    { countryName: "Europe", map: "/assets/images/mobile-app/maps/europe-map.svg" },
+    { countryName: "New Zealand", map: "/assets/images/mobile-app/maps/nzd-map.svg" },
+    { countryName: "Australia", map: "/assets/images/mobile-app/maps/aust-map.svg" },
+    { countryName: "India", map: "/assets/images/mobile-app/maps/india-map.svg" },
 ];
+
 
 const stats = [
     {
         icon: "/assets/images/mobile-app/exp.svg",
-        value: "10+",
+        value: "12+ Years",
         label: "Experience",
     },
     {
         icon: "/assets/images/mobile-app/dev.svg",
-        value: "2k+",
+        value: "35+",
         label: "Developers",
     },
     {
         icon: "/assets/images/mobile-app/client.svg",
-        value: "210+",
+        value: "650+",
         label: "Clients",
     },
 ];
@@ -101,7 +108,7 @@ export default function Hero() {
                             className="ml-[5px] 2xl:ml-[15px] w-[20px] sm:w-[28px]"
                         />
                         <span className="text-[#02021E] text-[16px] md:text-[20px] xl:text-[24px] 2xl:text-[32px] font-semibold ml-1">
-                            $22.00/
+                            $25/
                         </span>
                         <span className="text-[#222222] mt-[2px] lg:mt-[5px] 2xl:mt-[10px] text-[12px] md:text-[14px] 2xl:text-[18px] ml-1 items-end">
                             hour
@@ -129,11 +136,11 @@ export default function Hero() {
                         <Form title={'Hire Mobile App Developer'} buttontext={"Hire Mobile App Developer"} onClose={() => setIsOpen(false)} />
                     )}
 
-                    <div className="flex flex-wrap items-center justify-start gap-5 text-gray-200 mb-10">
+                    <div className="flex flex-wrap  justify-start gap-5 text-gray-200 mb-10">
                         {stats.map((item, index) => (
                             <div
                                 key={index}
-                                className="flex items-center justify-center sm:gap-4 flex-col sm:flex-row w-[90px] h-auto p-[10px] gap-2 sm:w-[160px] xl:w-[180px] 2xl:w-[190px]  sm:h-[74px] border border-[#FFFFFF80] rounded-md"
+                                className="flex items-center justify-start sm:gap-4 flex-col sm:flex-row w-[90px] h-auto p-[10px] gap-2 sm:w-[190px] xl:w-[190px]  sm:h-[74px] border border-[#FFFFFF80] rounded-md"
                                 style={{
                                     background: "#FFFFFF1F",
                                     backdropFilter: "blur(12px)",
@@ -142,13 +149,12 @@ export default function Hero() {
                                 <img
                                     src={process.env.PUBLIC_URL + item.icon}
                                     alt={item.label}
-                                    className="w-[24px] 2xl:w-[32px]"
                                 />
                                 <div className="flex flex-col text-center sm:text-left">
-                                    <span className="text-[#FFFFFF] text-[20px] 2xl:text-[26px] font-semibold">
+                                    <span className="text-[#FFFFFF] text-[20px]  font-semibold">
                                         {item.value}
                                     </span>
-                                    <span className="text-[#FFFFFF] text-[15px] 2xl:text-[17px]">
+                                    <span className="text-[#FFFFFF] text-[15px]">
                                         {item.label}
                                     </span>
                                 </div>
@@ -183,7 +189,7 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className="relative w-full h-[400px] lg:w-[40%] lg:h-auto flex justify-center items-center mt-8 lg:mt-0 px-4">
+                <div className="relative w-full h-auto lg:w-[40%] lg:h-auto flex justify-center items-center mt-8 lg:mt-0 px-4">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentCountry.countryName}
@@ -192,21 +198,15 @@ export default function Hero() {
                             exit={{ opacity: 0, y: -50 }}
                             transition={{ duration: 0.6 }}
                             className="
-                                    relative 
-                                    w-full 
-                                    max-w-[650px]
-                                    bg-gradient-to-b 
-                                    from-[#FFFFFF] 
-                                    to-[#CFE6FF] 
-                                    border border-[#22222224] 
-                                    rounded-2xl 
-                                    p-6 sm:p-8 
-                                    shadow-xl 
-                                    text-center
+                                    relative                                   
                                 "
                         >
+                            <img
+                                src={process.env.PUBLIC_URL + currentCountry.map}
+                                alt={currentCountry.countryName}
+                            />
                             {/* Top row (flags + logo) */}
-                            <div className="flex justify-between items-center">
+                            {/* <div className="flex justify-between items-center">
                                 <img
                                     src={process.env.PUBLIC_URL + currentCountry.smallLogo}
                                     alt={currentCountry.countryName}
@@ -220,7 +220,6 @@ export default function Hero() {
                                 />
                             </div>
 
-                            {/* Middle content */}
                             <div className="
                                 flex 
                                 flex-col sm:flex-row 
@@ -246,7 +245,7 @@ export default function Hero() {
                                         </span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </motion.div>
                     </AnimatePresence>
                 </div>

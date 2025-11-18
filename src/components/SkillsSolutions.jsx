@@ -9,7 +9,7 @@ export default function SkillsSolutions() {
             { name: "Swift", icon: "/assets/images/mobile-app/skills/swift.svg" },
             { name: "Kotlin", icon: "/assets/images/mobile-app/skills/kotlin.svg" },
             { name: "Flutter", icon: "/assets/images/mobile-app/skills/flutter.svg" },
-            { name: "Python", icon: "/assets/images/mobile-app/skills/python.svg" },
+            { name: "Raect Native", icon: "/assets/images/mobile-app/skills/react-native.svg" },
         ],
         "Web Development": [
             { name: "NodeJS", icon: "/assets/images/mobile-app/skills/nodejs.svg" },
@@ -49,7 +49,7 @@ export default function SkillsSolutions() {
             { name: "WooCommerce", icon: "/assets/images/mobile-app/skills/woo.svg" },
             { name: "Shopify", icon: "/assets/images/mobile-app/skills/shopify.svg" },
             { name: "Drupal", icon: "/assets/images/mobile-app/skills/drupal.svg" },
-            { name: "Bagisto", icon: "/assets/images/mobile-app/skills/bagisto.svg" },
+            { name: "BigCommerce", icon: "/assets/images/mobile-app/skills/bigcom.svg" },
         ],
         Database: [
             { name: "MySQL", icon: "/assets/images/mobile-app/skills/Sql_data.svg" },

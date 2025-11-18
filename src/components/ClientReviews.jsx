@@ -80,8 +80,7 @@ export default function ClientReviews() {
         },
     ];
 
-
-
+    const [imageLoaded, setImageLoaded] = useState(true);
     const [current, setCurrent] = useState(0);
     const [direction, setDirection] = useState(0);
 
@@ -153,7 +152,7 @@ export default function ClientReviews() {
 
             <div className="relative mt-[60px] flex justify-center">
                 <div
-                    className="h-full md:h-[600px] rounded-[16px] transition-all duration-500 ease-in-out overflow-hidden"
+                    className="h-full md:h-[600px] w-full rounded-[16px] transition-all duration-500 ease-in-out overflow-hidden"
                     style={{
                         background:
                             "linear-gradient(96.57deg, #FCE6FF 0.24%, rgba(255, 255, 255, 0.8) 99.76%)",
@@ -230,12 +229,17 @@ export default function ClientReviews() {
                             </div>
 
                             <div className="w-full lg:w-[60%]">
-                                <img
-                                    src={process.env.PUBLIC_URL + review.reviewImage}
-
-                                    className="rounded-[16px] h-full w-full object-cover"
-                                    alt={review.clientName}
-                                />
+                                {imageLoaded ? (
+                                    <img
+                                        src={process.env.PUBLIC_URL + review.reviewImage}
+                                        onError={() => setImageLoaded(false)}
+                                        className="rounded-[16px] h-full w-full object-cover"
+                                        alt={review.clientName}
+                                    />
+                                ) : (
+                                    // Skeleton
+                                    <div className="animate-pulse bg-gray-200 rounded-[16px] w-full h-[300px] lg:h-[600px]"></div>
+                                )}
                             </div>
                         </motion.div>
                     </AnimatePresence>
@@ -264,3 +268,4 @@ export default function ClientReviews() {
         </div>
     );
 }
+

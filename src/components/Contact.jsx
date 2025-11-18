@@ -6,7 +6,7 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 export default function Contact() {
     const router = useNavigate();
-
+    const [Sending, setSending] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -52,6 +52,7 @@ export default function Contact() {
         if (!formData.message.trim()) return toast.error("Message is required");
         if (formData.message.length > 1999)
             return toast.error("Message is too large");
+        setSending(true);
         try {
             const fillForm = await axios.post(
                 "https://shopifycustom.kretosstechnology.com/api/v1/kretoss/form",
@@ -65,6 +66,8 @@ export default function Contact() {
             }
         } catch (error) {
             console.log("error:", error);
+        } finally {
+            setSending(false)
         }
     };
     return (
@@ -164,9 +167,21 @@ export default function Contact() {
 
                             <button
                                 onClick={() => handleSubmit()}
-                                className="w-[160px] sm:w-[180px] h-[48px] sm:h-[50px] rounded-[8px] bg-[#5D59EA] text-white font-semibold hover:bg-[#4a46d4] transition-all shadow-[0_4px_10px_rgba(93,89,234,0.4)] cursor-pointer"
+                                disabled={Sending}
+                                className={`w-[160px] sm:w-[180px] h-[48px] sm:h-[50px] font-semibold py-2 rounded-[8px] transition 
+                                    ${Sending ? "bg-gray-400 cursor-not-allowed" : "bg-[#5D59EA] hover:bg-[#4a47d1] text-white"}
+                                `}
+                                style={{
+                                    boxShadow: Sending ? "none" : "0px 0px 22px 0px #5D59EA99",
+                                }}
                             >
-                                Send Message
+                                {Sending ? (
+                                    <div className="flex items-center justify-center gap-2">
+                                        <span className="loader"></span> Sending...
+                                    </div>
+                                ) : (
+                                    "Send Message"
+                                )}
                             </button>
                         </div>
                     </div>
@@ -184,7 +199,7 @@ export default function Contact() {
                                 <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/email.svg"} alt="email" />
                                 <div>
                                     <p className="text-[18px] font-semibold text-[#000]">Email Us</p>
-                                    <span className="text-[#323233] text-[16px]">info@kretoss.com</span>
+                                    <span className="text-[#323233] text-[16px]">ankur@kretoss.com</span>
                                 </div>
                             </div>
 
@@ -192,7 +207,7 @@ export default function Contact() {
                                 <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/wp.svg"} alt="whatsapp" />
                                 <div>
                                     <p className="text-[18px] font-semibold text-[#000]">WhatsApp Us</p>
-                                    <span className="text-[#323233] text-[16px]">(+91) 63534-23473</span>
+                                    <span className="text-[#323233] text-[16px]">(+91) 96879-90806</span>
                                 </div>
                             </div>
 

@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Support() {
     const Services = [
         { img: "/assets/images/mobile-app/support/mobDev.svg", txt: "Custom Mobile App Development", desc: "We specialize in developing, updating, and managing secure, custom Android apps using Java, Kotlin, and Android SDK." },
-        { img: "/assets/images/mobile-app/support/fullstack.svg", txt: "Full-stack App Development", desc: "Hire skilled app developers to build secure, scalable, and feature-rich applications that drive efficiency and profitability from concept to launch." },
-        { img: "/assets/images/mobile-app/support/appSol.svg", txt: "Enterprise App Solutions", desc: "Hire app developers to build adaptable enterprise solutions powered by smart data analytics, enhancing customer experience and workflow efficiency." },
-        { img: "/assets/images/mobile-app/support/appdecv.svg", txt: "Cross platform app Development", desc: "We specialize in developing, updating, & managing secure, custom cross-platform apps using Flutter, React Native for seamless performance across devices.." },
+        { img: "/assets/images/mobile-app/support/fullstack.svg", txt: "Full-stack Mobile App Development", desc: "Hire skilled app developers to build secure, scalable, and feature-rich applications that drive efficiency and profitability from concept to launch." },
+        { img: "/assets/images/mobile-app/support/appSol.svg", txt: "Enterprise Mobile App Solutions", desc: "Hire app developers to build adaptable enterprise solutions powered by smart data analytics, enhancing customer experience and workflow efficiency." },
+        { img: "/assets/images/mobile-app/support/appdecv.svg", txt: "Cross platform Mobile App Development", desc: "We specialize in developing, updating, & managing secure, custom cross-platform apps using Flutter, React Native for seamless performance across devices.." },
         { img: "/assets/images/mobile-app/support/thirdparty.svg", txt: "Third Party Integration", desc: "Hire expert developers to integrate third-party APIs for seamless connectivity and enhanced app functionality." },
     ];
 
@@ -116,7 +116,7 @@ export default function Support() {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.05 }}
-                                    className="border border-[#22222233] h-[200px] sm:h-auto rounded-[12px] bg-[#FFFFFF] p-[15px] flex-shrink-0"
+                                    className="border border-[#22222233] h-[210px] sm:h-auto rounded-[12px] bg-[#FFFFFF] p-[15px] flex-shrink-0"
                                     style={{
                                         width:
                                             itemsPerPage === 1
@@ -131,7 +131,7 @@ export default function Support() {
                                             src={item.img}
                                             className="bg-[#E1E0FF] p-2 rounded-full"
                                         /> */}
-                                        <span className="text-[19px] 2xl:text-[18px] text-[#02021E] font-semibold">
+                                        <span className="text-[17px] h-[50px] 2xl:text-[18px] text-[#02021E] font-semibold">
                                             {item.txt}
                                         </span>
                                     </div>

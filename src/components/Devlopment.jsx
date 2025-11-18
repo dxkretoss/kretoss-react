@@ -4,7 +4,7 @@ export default function Devlopment() {
     const developers = [
         {
             category: "Junior Developers",
-            cost: "$17",
+            cost: "$20",
             experience: "1–2 Years",
             methodology: "Agile",
             manager: "Yes",
@@ -13,8 +13,8 @@ export default function Devlopment() {
         },
         {
             category: "Mid-Level Developers",
-            cost: "$22",
-            experience: "2–5 Years",
+            cost: "$25",
+            experience: "2–4 Years",
             methodology: "Agile",
             manager: "Yes",
             timezone: "Yes",
@@ -22,8 +22,8 @@ export default function Devlopment() {
         },
         {
             category: "Senior Developers",
-            cost: "$30",
-            experience: "5+ Years",
+            cost: "$35",
+            experience: "6+ Years",
             methodology: "Agile",
             manager: "Yes",
             timezone: "Yes",

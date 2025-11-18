@@ -53,7 +53,7 @@ export default function TopHeader() {
                                 Black Friday Sale — Flat 20% OFF
                             </span>
                         </div> */}
-                        <div className="flex items-center gap-2 bg-gradient-to-r from-[#5D59EA] to-[#A05BFF] text-white px-3 py-1 rounded-lg shadow-md cursor-pointer">
+                        <div className="flex items-center gap-2 bg-gradient-to-r from-[#5D59EA] to-[#A05BFF] text-white px-3 py-1 rounded-lg shadow-md">
                             <span className="font-semibold text-[13px]">Black Friday Sale</span>
                             <span className="text-[12px]">20% OFF</span>
                         </div>

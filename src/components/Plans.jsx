@@ -8,7 +8,7 @@ export default function Plans() {
             id: 1,
             name: "Monthly Plan",
             mobbuttonduration: "Monthly",
-            price: "$2499.00",
+            price: "$2,499",
             duration: "/Month",
             shortDesc: "Hire best app developers on a flexible monthly plan designed to support ongoing development, updates, and feature enhancements. Ideal for businesses that need continuous support without long-term commitments.",
             img: "/assets/images/mobile-app/plans/monthly.svg",
@@ -22,7 +22,7 @@ export default function Plans() {
             id: 2,
             name: "Quarterly Plan",
             mobbuttonduration: "Quarterly",
-            price: "$6999.00",
+            price: "$6,999",
             duration: "/Quarter",
             shortDesc: "Hire mobile app developers on a quarterly basis for strategic development cycles, improved planning, and consistent progress. Perfect for scaling projects with predictable timelines and smooth execution.",
             img: "/assets/images/mobile-app/plans/qurter.svg",
@@ -36,7 +36,7 @@ export default function Plans() {
             id: 3,
             name: "Yearly Plan",
             mobbuttonduration: "Yearly",
-            price: "$19,999.00",
+            price: "$24,999",
             duration: "/Year",
             shortDesc: "Hire mobile app developers with a yearly plan to maximize value, optimize performance, and ensure long-term stability. Best for businesses committed to continuous innovation and sustained growth.",
             img: "/assets/images/mobile-app/plans/yearly.svg",
@@ -77,12 +77,12 @@ export default function Plans() {
                         key={plan.id}
                         onClick={() => setActivePlan(plan.name)}
                         className={`
-                px-6 py-2 rounded-full text-[15px] font-medium transition-all duration-300
-                ${activePlan === plan.name
+                            px-6 py-2 rounded-full text-[15px] font-medium transition-all duration-300
+                            ${activePlan === plan.name
                                 ? "bg-[#5D59EA] text-white shadow-md"
                                 : "border border-[#5D59EA] text-[#5D59EA] bg-transparent"
                             }
-            `}
+                        `}
                     >
                         {plan.mobbuttonduration}
                     </button>
@@ -119,12 +119,21 @@ function PlanCard({ plan, isActive, setActivePlan }) {
 
     return (
         <div
-            className={`w-full lg:w-[32%] mt-10 sm:mt-16 rounded-2xl bg-white border p-6 sm:p-8 flex flex-col items-center justify-center transition-all duration-300 
+            className={`relative overflow-hidden  w-full lg:w-[32%] mt-10 sm:mt-16 rounded-2xl bg-white border p-6 sm:p-8 flex flex-col items-center justify-center transition-all duration-300 
                 ${isActive
                     ? "border-[#5D59EA80] shadow-[0px_0px_25px_0px_#5D59EA99]"
                     : "border-[#02021E33]"
                 }`}
         >
+            <div className="absolute top-6 -right-12 rotate-[35deg]">
+                <div className="bg-gradient-to-r from-[#5D59EA] to-[#A05BFF]
+                    text-white px-6 py-1 text-center shadow-lg
+                    flex flex-col items-center justify-center
+                    min-w-[200px] rounded-sm">
+                    <span className="text-[12px] opacity-80 leading-none">Black Friday Sale</span>
+                    <span className="text-[14px] font-bold leading-none">20% OFF</span>
+                </div>
+            </div>
             <img
                 src={process.env.PUBLIC_URL + plan.img}
                 alt={plan.name}

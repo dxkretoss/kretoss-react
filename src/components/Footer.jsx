@@ -8,7 +8,7 @@ export default function Footer() {
 
     return (
         <footer
-            className="w-full py-6 xl:py-14 2xl:py-20"
+            className="w-full py-6 xl:py-10"
             style={{
                 background: "linear-gradient(99.21deg, #343284 0.29%, #5D59EA 99.71%)",
             }}

@@ -23,7 +23,7 @@ export default function ScalableSection() {
         },
         {
             icon: "/assets/images/mobile-app/review.svg",
-            value: <CountUpNumber target={600} />,
+            value: <CountUpNumber target={650} />,
             suffix: "+",
             label: "Five-Star Client Reviews",
         },
@@ -142,7 +142,7 @@ export default function ScalableSection() {
                             <div className='flex h-[136px] w-[296px] border-r border-[#0000001A] p-8'>
                                 <img src={process.env.PUBLIC_URL + "/assets/images/mobile-app/review.svg"} alt="" className='w-[53px] h-[53px]' />
                                 <div className='ml-[22px] w-[144px]'>
-                                    <p className="text-[28px] font-semibold text[#000000]"><CountUpNumber target={600} />+</p>
+                                    <p className="text-[28px] font-semibold text[#000000]"><CountUpNumber target={650} />+</p>
                                     <p className="text-[#000000] text-[15px]">Five-Star Client Reviews</p>
                                 </div>
                             </div>
