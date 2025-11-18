@@ -101,7 +101,7 @@ export default function WhyKretoss() {
                                 {card.points.map((item, index) => (
                                     <div
                                         key={index}
-                                        className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-[12px]"
+                                        className="flex h-[60px] items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-[12px]"
                                         style={{
                                             background:
                                                 "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(93,89,234,0.1) 50.23%, rgba(255,255,255,0) 100%)",

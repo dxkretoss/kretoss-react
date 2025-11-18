@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import axios from "axios";
 import { useNavigate } from "react-router-dom"; // ← replace useRouter
 import toast from 'react-hot-toast';
-
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 export default function Form({ title, buttontext, onClose, plan }) {
     const router = useNavigate();
     const [formData, setFormData] = useState({
@@ -21,16 +22,35 @@ export default function Form({ title, buttontext, onClose, plan }) {
         });
     };
 
+    const allowedDomains = ["gmail.com", "yahoo.com", "outlook.com"];
     const handleSubmit = async () => {
         if (!formData.name.trim()) return toast.error("Name is required");
         if (!formData.email.trim()) return toast.error("Email is required");
         if (!/\S+@\S+\.\S+/.test(formData.email))
             return toast.error("Enter a valid email address");
+        const emailDomain = formData.email.split("@")[1];
+        if (!allowedDomains.includes(emailDomain.toLowerCase())) {
+            return toast.error("Please Enter a valid email address ");
+        }
         if (!formData.phone.trim()) return toast.error("Phone number is required");
-        if (!/^\d{10}$/.test(formData.phone))
-            return toast.error("Enter a valid 10-digit phone number");
+        const cleaned = formData.phone.replace(/\D/g, ""); // keep digits only
+
+        if (cleaned.length < 8) {
+            return toast.error("Enter a valid phone number");
+        }
+        const repeatedPatterns = [
+            "1111111111", "2222222222", "3333333333",
+            "4444444444", "5555555555", "6666666666",
+            "7777777777", "8888888888", "9999999999",
+            "0000000000", "1234567890", "0123456789"
+        ];
+        if (repeatedPatterns.includes(formData.phone)) {
+            return toast.error("Enter a valid phone number");
+        }
         if (!formData.budget.trim()) return toast.error("Budget is required");
         if (!formData.message.trim()) return toast.error("Message is required");
+        if (formData.message.length > 1999)
+            return toast.error("Message is too large");
         try {
             const fillForm = await axios.post(
                 "https://shopifycustom.kretosstechnology.com/api/v1/kretoss/form",
@@ -100,13 +120,16 @@ export default function Form({ title, buttontext, onClose, plan }) {
                             <label className="block text-[#000000] text-[16px] font-medium mb-[6px]">
                                 Phone Number
                             </label>
-                            <input
-                                name="phone"
-                                type="text"
-                                placeholder="123 432 3432"
-                                onChange={handleChange}
+                            <PhoneInput
+                                country={'in'}
                                 value={formData.phone}
-                                className="w-full h-[48px] px-[12px] rounded-[6px] text-[#333]  border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
+                                onChange={(phone) => setFormData({ ...formData, phone })}
+                                inputClass="w-full h-[48px] px-[20px] rounded-[6px] text-[#000000] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
+                                containerClass="w-full"
+                                inputProps={{
+                                    name: 'phone',
+                                    required: true,
+                                }}
                             />
                         </div>
                         <div>

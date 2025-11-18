@@ -174,3 +174,43 @@ html,
 body {
   overflow-anchor: none;
 }
+
+.react-tel-input .form-control {
+  color: #000 !important;
+  font-size: 16px;
+  background-color: #f5f8fc !important;
+  height: 48px !important;
+  width: 100% !important;
+  border-radius: 6px !important;
+  border: 1px solid #e0e0e0 !important;
+  padding-left: 55px !important; /* required for flag spacing */
+}
+
+.react-tel-input .country-list {
+  color: #000 !important;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background-color: #5d59ea;
+  color: white;
+  font-size: 22px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 9999;
+  box-shadow: rgba(93, 89, 234, 0.6) 0px 0px 22px 0px;
+}
+
+.back-to-top:hover {
+  background-color: #2563eb; /* blue */
+  transform: translateY(-3px);
+}

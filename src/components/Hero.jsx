@@ -77,7 +77,7 @@ export default function Hero() {
         >
             <div className="absolute inset-0 bg-black/50"></div>
 
-            <div className="container container_content relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 sm:px-8 md:px-12 lg:px-8 xl:px-12 2xl:px-18 gap-10 md:gap-14">
+            <div className="container container_content relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 xl:px-8 2xl:px-18 gap-10 md:gap-14">
                 <div className="w-full lg:w-[55%] flex flex-col items-center text-center lg:items-start lg:text-left">
                     <h1 className="text-[40px] lg:text-[44px] 2xl:text-[56px] leading-tight mb-6 font-semibold text-white">
                         Hire{" "}
@@ -118,7 +118,7 @@ export default function Hero() {
 
                         <button
                             onClick={() => setIsOpen(true)}
-                            className="flex ml-[8px] sm:ml-[15px] sm:w-auto sm:mt-0 xl:hidden gap-2 items-center justify-center bg-[#5D59EA] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold text-[15px] sm:text-[16px] hover:opacity-90 transition"
+                            className="flex ml-[8px] sm:ml-[15px] sm:w-auto sm:mt-0 xl:hidden gap-2 items-center justify-center bg-[#5D59EA] text-white px-4 sm:px-8 py-2 sm:py-3.5 rounded-full font-semibold text-[15px] sm:text-[16px] hover:opacity-90 transition"
                             style={{ boxShadow: "0px 0px 22px 0px #5D59EA99" }}
                         >
                             Hire
@@ -130,11 +130,11 @@ export default function Hero() {
                         <Form title={'Hire Mobile App Developer'} buttontext={"Hire Mobile App Developer"} onClose={() => setIsOpen(false)} />
                     )}
 
-                    <div className="flex flex-wrap items-center justify-start gap-5 sm:gap-8 text-gray-200 mb-10">
+                    <div className="flex flex-wrap items-center justify-start gap-5 text-gray-200 mb-10">
                         {stats.map((item, index) => (
                             <div
                                 key={index}
-                                className="flex items-center justify-center sm:gap-4 flex-col sm:flex-row w-[90px] h-auto p-[10px] gap-2 sm:w-[180px] md:w-[190px]  sm:h-[74px] border border-[#FFFFFF80] rounded-md"
+                                className="flex items-center justify-center sm:gap-4 flex-col sm:flex-row w-[90px] h-auto p-[10px] gap-2 sm:w-[160px] 2xl:w-[190px]  sm:h-[74px] border border-[#FFFFFF80] rounded-md"
                                 style={{
                                     background: "#FFFFFF1F",
                                     backdropFilter: "blur(12px)",
@@ -143,14 +143,13 @@ export default function Hero() {
                                 <img
                                     src={item.icon}
                                     alt={item.label}
-
-                                    className="w-[24px] sm:w-[32px]"
+                                    className="w-[24px] 2xl:w-[32px]"
                                 />
                                 <div className="flex flex-col text-center sm:text-left">
-                                    <span className="text-[#FFFFFF] text-[20px] sm:text-[26px] font-semibold">
+                                    <span className="text-[#FFFFFF] text-[20px] 2xl:text-[26px] font-semibold">
                                         {item.value}
                                     </span>
-                                    <span className="text-[#FFFFFF] text-[15px] sm:text-[17px]">
+                                    <span className="text-[#FFFFFF] text-[15px] 2xl:text-[17px]">
                                         {item.label}
                                     </span>
                                 </div>
@@ -162,7 +161,7 @@ export default function Hero() {
                         <p className="text-[15px] sm:text-[22px] 2xl:text-[28px] font-light">
                             <span className="font-bold">Trusted</span> by:
                         </p>
-                        <div className="flex  items-center">
+                        <div className="flex items-center">
                             {[
                                 "/assets/images/mobile-app/trusted/trusted-1.svg",
                                 "/assets/images/mobile-app/trusted/trusted-2.svg",
@@ -200,13 +199,12 @@ export default function Hero() {
                                 <img
                                     src={currentCountry.smallLogo}
                                     alt={currentCountry.countryName}
-
-                                    className="w-[30px] sm:w-[70px]"
+                                    className="w-[40px] 2xl:w-[70px]"
                                 />
                                 <img
                                     src="/assets/images/mobile-app/logo.svg"
 
-                                    className="w-[120px] md:w-[150px]"
+                                    className="w-[120px] 2xl:w-[150px]"
                                     alt="logo"
                                 />
                             </div>
