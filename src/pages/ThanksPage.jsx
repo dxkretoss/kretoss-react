@@ -31,7 +31,7 @@ export default function ThanksPage() {
             </a> */}
 
             <a
-                href="/"
+                href="/hire-mobile-app-developers"
                 className="flex items-center justify-center gap-2 bg-[#6E56CF] text-white px-6 py-3 rounded-xl shadow-md hover:bg-[#5b47c5] transition"
             >
                 <ArrowLeft size={18} />
