@@ -35,7 +35,7 @@ export default function Devlopment() {
         <div className="relative container section container_content mx-auto w-full">
             <div className="max-w-[900px] 2xl:max-w-[1300px] mx-auto text-center px-2">
                 <h1
-                    className="text-[26px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-center text-[#02021E] leading-snug md:leading-tight relative mb-6"
+                    className="text-[26px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-center text-[#02021E] relative mb-6"
                 >
                     Hire App Developers to Empower Your Business with Our Proven Development{" "}
                     <span className="relative inline-block text-[#5D59EA]">

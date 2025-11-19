@@ -22,12 +22,12 @@ export default function GlobalExp() {
 
                     <h1
                         className="mt-6 sm:mt-8 text-[26px] sm:text-[34px] md:text-[40px] 2xl:text-[48px] 
-                                   font-semibold text-[#02021E] leading-tight"
+                                   font-semibold text-[#02021E]"
                     >
                         Tap Into{" "}
                         <span
                             className="bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] 
-                                       font-bold text-white rounded-md px-2 sm:px-3 py-1 sm:py-1.5
+                                       font-bold text-white rounded-md px-3 py-1
                                        whitespace-nowrap"
                         >
                             Global Expertise

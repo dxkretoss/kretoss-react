@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import TopHeader from '../components/TopHeader'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
@@ -18,6 +18,14 @@ import Faqs from '../components/Faqs'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 export default function Home() {
+
+    useEffect(() => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: "pageview",
+            page: "/hire-mobile-app-developers",
+        });
+    }, []);
     return (
         <div>
             <TopHeader />

@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ArrowLeft } from "lucide-react";
 
 export default function ThanksPage() {
+    useEffect(() => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: "pageview",
+            page: "/hire-mobile-app-developers/thankyou",
+        });
+    }, []);
     return (
         <div className="min-h-screen flex flex-col items-center justify-center gap-8 bg-[#efffef] text-center px-4">
             <img

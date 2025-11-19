@@ -3,46 +3,6 @@ import { MoveRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Form from "./Form";
 
-const countryData = [
-    // {
-    //     smallLogo: "/assets/images/mobile-app/maps/indiaCountry.svg",
-    //     mapLogo: "/assets/images/mobile-app/maps/india.svg",
-    //     countryName: "India",
-    //     hourlyPrice: "$23.00",
-    // },
-    // {
-    //     smallLogo: "/assets/images/mobile-app/maps/austContry.svg",
-    //     mapLogo: "/assets/images/mobile-app/maps/aust.svg",
-    //     countryName: "Australia",
-    //     hourlyPrice: "AUD 150.00",
-    // },
-    // {
-    //     smallLogo: "/assets/images/mobile-app/maps/newzealandContry.svg",
-    //     mapLogo: "/assets/images/mobile-app/maps/newzealand.svg",
-    //     countryName: "New Zealand",
-    //     hourlyPrice: "NZD 170.00",
-    // },
-    // {
-    //     smallLogo: "/assets/images/mobile-app/maps/usaCountry.svg",
-    //     mapLogo: "/assets/images/mobile-app/maps/usamap.svg",
-    //     countryName: "USA",
-    //     hourlyPrice: "$150.00",
-    // },
-    // {
-    //     smallLogo: "/assets/images/mobile-app/maps/europeCountry.svg",
-    //     mapLogo: "/assets/images/mobile-app/maps/europe.svg",
-    //     countryName: "Europe",
-    //     hourlyPrice: "€130.00",
-    // },
-
-    { countryName: "USA", map: "/assets/images/mobile-app/maps/usa-map.svg" },
-    { countryName: "Europe", map: "/assets/images/mobile-app/maps/europe-map.svg" },
-    { countryName: "New Zealand", map: "/assets/images/mobile-app/maps/nzd-map.svg" },
-    { countryName: "Australia", map: "/assets/images/mobile-app/maps/aust-map.svg" },
-    { countryName: "India", map: "/assets/images/mobile-app/maps/india-map.svg" },
-];
-
-
 const stats = [
     {
         icon: "/assets/images/mobile-app/exp.svg",
@@ -59,6 +19,14 @@ const stats = [
         value: "650+",
         label: "Clients",
     },
+];
+
+const countryData = [
+    { countryName: "USA", map: "/assets/images/mobile-app/maps/usa-map.svg" },
+    { countryName: "Europe", map: "/assets/images/mobile-app/maps/europe-map.svg" },
+    { countryName: "New Zealand", map: "/assets/images/mobile-app/maps/nzd-map.svg" },
+    { countryName: "Australia", map: "/assets/images/mobile-app/maps/aust-map.svg" },
+    { countryName: "India", map: "/assets/images/mobile-app/maps/india-map.svg" },
 ];
 
 export default function Hero() {
@@ -86,9 +54,9 @@ export default function Hero() {
 
             <div className="container container_content relative z-10 flex flex-col lg:flex-row items-center justify-between px-6  2xl:px-18 gap-10 md:gap-14">
                 <div className="w-full lg:w-[55%] flex flex-col items-center text-center lg:items-start lg:text-left">
-                    <h1 className="text-[40px] lg:text-[44px] 2xl:text-[56px] leading-tight mb-6 font-semibold text-white">
+                    <h1 className="text-[40px] lg:text-[44px] 2xl:text-[56px]  mb-6 font-semibold text-white">
                         Hire{" "}
-                        <span className="bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] font-bold text-white rounded-md px-3 sm:px-4 md:px-5 py-2 sm:py-3 whitespace-nowrap">
+                        <span className="bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] font-bold text-white rounded-md px-3 py-1 whitespace-nowrap">
                             Mobile App
                         </span>{" "}
                         Developers
@@ -99,8 +67,8 @@ export default function Hero() {
                         user-friendly app solutions tailored to your project needs.
                     </p>
 
-                    <div className="sm:w-auto flex flex-wrap items-center mb-10 bg-white rounded-full border border-[#E4E3FF] px-4 sm:px-6 py-3 sm:py-4">
-                        <span className="text-[#222222] text-[15px] sm:text-[16px] md:text-[18px] font-medium">
+                    <div className="sm:w-auto flex flex-wrap items-center mb-10 bg-white rounded-full border border-[#E4E3FF] px-2 py-2 md:px-4 md:py-4">
+                        <span className="text-[#222222] text-[15px] sm:text-[16px] md:text-[18px] font-medium ml-2 lg:ml-0">
                             Starting at
                         </span>
                         <img
@@ -136,11 +104,11 @@ export default function Hero() {
                         <Form title={'Hire Mobile App Developer'} buttontext={"Hire Mobile App Developer"} onClose={() => setIsOpen(false)} />
                     )}
 
-                    <div className="flex flex-wrap  justify-start gap-5 text-gray-200 mb-10">
+                    <div className="flex flex-wrap  justify-start gap-2 md:gap-5 text-gray-200 mb-10">
                         {stats.map((item, index) => (
                             <div
                                 key={index}
-                                className="flex items-center justify-start sm:gap-4 flex-col sm:flex-row w-[90px] h-auto p-[10px] gap-2 sm:w-[190px] xl:w-[190px]  sm:h-[74px] border border-[#FFFFFF80] rounded-md"
+                                className="flex items-center justify-start sm:gap-4 flex-col sm:flex-row w-[100px] h-auto p-[10px] gap-2 sm:w-[190px] xl:w-[190px]  sm:h-[74px] border border-[#FFFFFF80] rounded-md"
                                 style={{
                                     background: "#FFFFFF1F",
                                     backdropFilter: "blur(12px)",
@@ -189,66 +157,24 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className="relative w-full h-auto lg:w-[40%] lg:h-auto flex justify-center items-center mt-8 lg:mt-0 px-4">
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={currentCountry.countryName}
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -50 }}
-                            transition={{ duration: 0.6 }}
-                            className="
-                                    relative                                   
-                                "
-                        >
-                            <img
+                <div className="relative w-full lg:w-[40%] mt-8 lg:mt-0 px-4 flex justify-center items-center">
+                    <div className="relative w-full h-[200px] lg:h-[400px] flex justify-center items-center">
+                        <AnimatePresence mode="wait">
+                            <motion.img
+                                key={currentCountry.countryName}
+                                className="absolute top-0 left-0 w-full h-full object-contain"
                                 src={process.env.PUBLIC_URL + currentCountry.map}
                                 alt={currentCountry.countryName}
+
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.6, ease: "easeInOut" }}
                             />
-                            {/* Top row (flags + logo) */}
-                            {/* <div className="flex justify-between items-center">
-                                <img
-                                    src={process.env.PUBLIC_URL + currentCountry.smallLogo}
-                                    alt={currentCountry.countryName}
-                                    className="w-[40px] sm:w-[50px] 2xl:w-[70px]"
-                                />
-
-                                <img
-                                    src={process.env.PUBLIC_URL + "/assets/images/mobile-app/logo.svg"}
-                                    className="w-[110px] sm:w-[130px] 2xl:w-[150px]"
-                                    alt="logo"
-                                />
-                            </div>
-
-                            <div className="
-                                flex 
-                                flex-col sm:flex-row 
-                                justify-center sm:justify-between 
-                                items-center 
-                                mt-10 
-                                gap-6 sm:gap-10
-                            ">
-                                <img
-                                    src={process.env.PUBLIC_URL + currentCountry.mapLogo}
-                                    alt={currentCountry.countryName}
-                                    className="w-[150px] sm:w-[180px] lg:w-[200px] 2xl:w-[230px]"
-                                />
-
-                                <div className="flex flex-col text-center sm:text-left">
-                                    <span className="text-[24px] md:text-[24px] 2xl:text-[32px] text-[#02021E] font-medium">
-                                        {currentCountry.countryName}
-                                    </span>
-
-                                    <div className="flex items-center justify-center sm:justify-start">
-                                        <span className="text-[24px] md:text-[24px] 2xl:text-[32px] text-[#02021E] font-bold">
-                                            {currentCountry.hourlyPrice}/ hour
-                                        </span>
-                                    </div>
-                                </div>
-                            </div> */}
-                        </motion.div>
-                    </AnimatePresence>
+                        </AnimatePresence>
+                    </div>
                 </div>
+
 
             </div>
         </section>

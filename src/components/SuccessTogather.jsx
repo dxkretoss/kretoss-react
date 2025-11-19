@@ -48,7 +48,7 @@ export default function SuccessTogather() {
 
                 <div className="max-w-[800px] lg:max-w-[710px] mx-auto">
                     <h1
-                        className="text-[30px] sm:text-[36px] md:text-[42px] lg:text-[50px] font-semibold text-[#02021E] leading-tight"
+                        className="text-[30px] sm:text-[36px] md:text-[42px] lg:text-[50px] font-semibold text-[#02021E]"
                     >
                         Let’s Build{" "}
                         <span className="relative inline-block text-[#5D59EA]">
