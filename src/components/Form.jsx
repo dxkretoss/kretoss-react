@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // ← replace useRouter
+import { useNavigate } from "react-router-dom";
 import toast from 'react-hot-toast';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 export default function Form({ title, buttontext, onClose, plan }) {
-    const router = useNavigate();
+    const Navigate = useNavigate();
     const [Sending, setSending] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
@@ -169,7 +169,8 @@ export default function Form({ title, buttontext, onClose, plan }) {
                 toast.success('Form submitted successfully.');
                 onClose();
                 setTimeout(() => {
-                    router("/hire-mobile-app-developers/thankyou");
+                    // Navigate("/hire-mobile-app-developers/thankyou");
+                    window.location.href = `${window.location.pathname}thankyou`;
                 }, 2000);
             }
         } catch (error) {
