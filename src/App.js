@@ -3,10 +3,12 @@ import Home from "./pages/Home";
 import ThanksPage from "./pages/ThanksPage";
 import { Toaster } from "react-hot-toast";
 import BackToTop from "./components/BackToTop";
+import GTM from "./GTM";
 
 function App() {
   return (
     <BrowserRouter>
+      <GTM />
       <Toaster />
       <Routes>
         <Route path="/hire-mobile-app-developers" element={<Home />} />

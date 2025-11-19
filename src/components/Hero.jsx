@@ -84,7 +84,7 @@ export default function Hero() {
         >
             <div className="absolute inset-0 bg-black/50"></div>
 
-            <div className="container container_content relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 xl:px-8 2xl:px-18 gap-10 md:gap-14">
+            <div className="container container_content relative z-10 flex flex-col lg:flex-row items-center justify-between px-6  2xl:px-18 gap-10 md:gap-14">
                 <div className="w-full lg:w-[55%] flex flex-col items-center text-center lg:items-start lg:text-left">
                     <h1 className="text-[40px] lg:text-[44px] 2xl:text-[56px] leading-tight mb-6 font-semibold text-white">
                         Hire{" "}

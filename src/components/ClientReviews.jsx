@@ -6,16 +6,16 @@ export default function ClientReviews() {
         {
             title: (
                 <>
-                    Elegant <b>E-Commerce App</b> Crafted for <b>TrendyWear Fashion</b>
+                    Smart <b>Tax Management App</b> Built for <b>Taxley</b>
                 </>
             ),
             appUsed: ["Flutter", "NodeJS", "GCP", "Socket.IO"],
             description:
-                "The Kretoss team transformed our fashion vision into a smooth, high-performing app. The design feels premium, checkout is seamless, and performance is flawless. We appreciated their communication and commitment throughout the project.",
+                "Kretoss developed a fast and user-friendly tax management app for Taxley, simplifying filings, tracking, and document handling with a clean and intuitive interface.",
             rating: 5,
             clientImage: "/assets/images/mobile-app/reviews/client-2.jpg",
             clientName: "Samantha Miller",
-            clientPosition: "CEO of TrendyWear",
+            clientPosition: "Founder of Taxley",
             reviewImage: "/assets/images/mobile-app/reviews/review2.jpg",
         },
         {
@@ -36,16 +36,16 @@ export default function ClientReviews() {
         {
             title: (
                 <>
-                    A <b>Luxury Shopify</b> Experience for <b>Tango Swim</b> Enthusiasts
+                    Reliable <b>City2City</b> Travel Booking App — Built for Comfort & Convenience
                 </>
             ),
             appUsed: ["Flutter", "NodeJS", "MongoDB", "Socket.IO"],
             description:
-                "Kretoss built a luxury e-commerce app that perfectly represents our brand. The visuals are elegant, navigation is intuitive, and performance is top-notch. Their team’s professionalism and attention to detail made the process effortless.",
+                "Kretoss delivered a smooth and intuitive travel booking app for City2City, offering fast search, easy reservations, and a seamless user experience across all devices.",
             rating: 4,
             clientImage: "/assets/images/mobile-app/reviews/client-4.jpg",
             clientName: "Rebekah Johnson",
-            clientPosition: "CEO of Tango Swim",
+            clientPosition: "CEO of City2City",
             reviewImage: "/assets/images/mobile-app/reviews/review4.png",
         },
         {
@@ -73,11 +73,63 @@ export default function ClientReviews() {
             description:
                 "Kretoss delivered a flawless wellness app that perfectly captures our mission. Their expertise, communication, and design approach made development effortless. I’m confident this is the team for all our future projects.",
             rating: 4,
-            clientImage: "/assets/images/mobile-app/reviews/client-2.jpg",
-            clientName: "Olivia Carter",
+            clientImage: "/assets/images/mobile-app/reviews/client-3.jpg",
+            clientName: "Ryan Mitchell",
             clientPosition: "Founder of Somnexis",
             reviewImage: "/assets/images/mobile-app/reviews/review6.png",
         },
+        {
+            title: (
+                <>
+                    Powerful <b>Food Delivery Platform</b> for <b>Offarat</b> — Built for Speed & Scale
+                </>
+            ),
+            appUsed: ["Flutter", "NodeJS", "MongoDB"],
+            description:
+                "Kretoss delivered a smooth, fast, and high-quality food delivery app for Offarat. Truly an outstanding development partner.",
+            rating: 4,
+            clientImage: "/assets/images/mobile-app/reviews/client-6.jpg",
+            clientName: "Michael Anderson",
+            clientPosition: "Co-Founder of Offarat",
+            reviewImage: "/assets/images/mobile-app/reviews/review3.png",
+        },
+        {
+            title: (
+                <>
+                    Smart <b>Fitness Scheduling Platform</b> for <b>TriSchedule</b> — Built for Efficiency
+                </>
+            ),
+            appUsed: ["Flutter", "Laravel", "SQL"],
+            description:
+                <>
+                    Kretoss delivered a sleek and powerful fitness scheduling app for TriSchedule, complete with seamless <b>Apple Watch</b> and <b>Garmin integration</b>. The performance, usability, and attention to detail were outstanding.
+                </>
+            ,
+            rating: 4,
+            clientImage: "/assets/images/mobile-app/reviews/client-7.jpg",
+            clientName: "James Walker",
+            clientPosition: "Founder of TriSchedule",
+            reviewImage: "/assets/images/mobile-app/reviews/review7.png",
+        },
+        {
+            title: (
+                <>
+                    Dynamic <b>Music Streaming Platform</b> for <b>Kolderkid Universe</b> — Built for Creators
+                </>
+            ),
+            appUsed: ["React Native", "Laravel", "SQL"],
+            description: (
+                <>
+                    Kretoss developed a fast, intuitive, and beautifully crafted music app for Kolderkid Universe, delivering seamless playback, smooth navigation, and an exceptional user experience tailored for artists and listeners alike.
+                </>
+            ),
+            rating: 4,
+            clientImage: "/assets/images/mobile-app/reviews/client-8.jpg",
+            clientName: "Daniel Brooks",
+            clientPosition: "Founder of Kolderkid Universe",
+            reviewImage: "/assets/images/mobile-app/reviews/review8.png",
+        }
+
     ];
 
     const [imageLoaded, setImageLoaded] = useState(true);
@@ -152,7 +204,7 @@ export default function ClientReviews() {
 
             <div className="relative mt-[60px] flex justify-center">
                 <div
-                    className="h-full md:h-[600px] w-full rounded-[16px] transition-all duration-500 ease-in-out overflow-hidden"
+                    className="h-full lg:h-[600px] w-full rounded-[16px] transition-all duration-500 ease-in-out overflow-hidden"
                     style={{
                         background:
                             "linear-gradient(96.57deg, #FCE6FF 0.24%, rgba(255, 255, 255, 0.8) 99.76%)",
@@ -168,9 +220,9 @@ export default function ClientReviews() {
                             initial="enter"
                             animate="center"
                             exit="exit"
-                            className="flex flex-col lg:flex-row"
+                            className="grid grid-cols-1 lg:grid-cols-2 h-full"
                         >
-                            <div className="w-full lg:w-[45%] px-[20px] py-[30px] md:px-[70px] md:py-[90px] flex flex-col justify-center">
+                            <div className="py-[40px] lg:py-[20px] px-[50px] md:px-[50px] flex flex-col justify-center">
                                 <h1 className="w-full text-[22px] md:text-[32px] text-[#02021E] leading-[46px]">
                                     {review.title}
                                 </h1>
@@ -228,7 +280,7 @@ export default function ClientReviews() {
                                 </div>
                             </div>
 
-                            <div className="w-full lg:w-[60%]">
+                            <div className="h-full">
                                 {imageLoaded ? (
                                     <img
                                         src={process.env.PUBLIC_URL + review.reviewImage}
